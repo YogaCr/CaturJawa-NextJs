@@ -1,0 +1,41 @@
+.field{
+    width:20%;
+    position: relative;
+    padding-bottom: 20%;
+    border: 1px solid black;
+}
+.fieldCanSelect{
+    background-color: red;
+}
+.field:after{
+    display: block;
+    padding-bottom: 100%;
+}
+.content{
+    position: absolute;
+    text-align: center;
+    font-size: 12rem;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width:575px){
+    .content{
+        font-size: 3.75rem;
+    }   
+}
+@media screen and (min-width:576px)  and (max-width:767px){
+    .content{
+        font-size: 5rem;
+    }   
+}
+@media screen and (min-width:768px)  and (max-width:991px){
+    .content{
+        font-size: 7rem;
+    }   
+}
+@media screen and (min-width:992px)  and (max-width:1199px){
+    .content{
+        font-size: 9rem;
+    }   
+}

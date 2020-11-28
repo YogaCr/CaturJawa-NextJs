@@ -1,65 +1,19 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-
-export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+import { IoGameControllerOutline } from "react-icons/io5";
+import Layout from '../components/layout'
+import Link from 'next/link'
+export default function Index(){
+    return <Layout classes={"d-flex align-items-center"}>
+        <div className={"row"} style={{width:"100%"}}>
+            <div className={"col-md-5"}>
+                <h1 className={"text-right mr-md-2 mb-0 p-0"} style={{fontWeight:"bolder"}}>Catur Jawa</h1>
+                <p className={"text-secondary text-right mr-md-2 mb-0 p-0"}>A tic-tac-toe like game</p>
+                <p className={"text-secondary text-right mr-md-2 mb-0 p-0"} style={{fontSize:"0.6rem"}}>Created by <Link href="https://github.com/YogaCr">YogaCr</Link></p>
+            </div>
+            <div className={"col-md-1 d-none d-md-block"} style={{maxWidth:"3px",backgroundColor:"#34495e",padding:0}}></div>
+            <div className={"col-md-6 d-flex flex-column justify-content-center"}>
+                <Link href="/game"><button className={"btn btn-outline-success border-0 btn-lg btn-block"}><IoGameControllerOutline/> Play</button></Link>
+            </div>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+        
+    </Layout>
 }
